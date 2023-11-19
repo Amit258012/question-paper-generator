@@ -1,0 +1,296 @@
+[
+	{
+		"question": "What is the capital of France?",
+		"subject": "Geography",
+		"topic": "World Capitals",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Who is known as the 'Father of Computers'?",
+		"subject": "Computer Science",
+		"topic": "Pioneers",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the largest planet in our solar system?",
+		"subject": "Astronomy",
+		"topic": "Planets",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "How many continents are there?",
+		"subject": "Geography",
+		"topic": "Continents",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Who wrote 'Romeo and Juliet'?",
+		"subject": "Literature",
+		"topic": "Shakespeare",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the capital of Australia?",
+		"subject": "Geography",
+		"topic": "World Capitals",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Who painted the Mona Lisa?",
+		"subject": "Art",
+		"topic": "Renaissance Art",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the currency of Japan?",
+		"subject": "Economics",
+		"topic": "Currencies",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the main ingredient in guacamole?",
+		"subject": "Culinary Arts",
+		"topic": "Food",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Who is the current President of the United States?",
+		"subject": "Politics",
+		"topic": "Current Affairs",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the capital of Japan?",
+		"subject": "Geography",
+		"topic": "World Capitals",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Who wrote 'To Kill a Mockingbird'?",
+		"subject": "Literature",
+		"topic": "Modern Classics",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "Solve the equation: 2x + 5 = 15",
+		"subject": "Math",
+		"topic": "Algebra",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "Name the largest ocean on Earth",
+		"subject": "Geography",
+		"topic": "Oceans",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "In which year did the Titanic sink?",
+		"subject": "History",
+		"topic": "Maritime History",
+		"difficulty": "Hard",
+		"marks": 15
+	},
+	{
+		"question": "What is the chemical symbol for gold?",
+		"subject": "Chemistry",
+		"topic": "Elements",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Who is the current Prime Minister of Canada?",
+		"subject": "Politics",
+		"topic": "Current Affairs",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "What is the largest mammal on land?",
+		"subject": "Biology",
+		"topic": "Zoology",
+		"difficulty": "Hard",
+		"marks": 15
+	},
+	{
+		"question": "Name three famous paintings by Leonardo da Vinci",
+		"subject": "Art",
+		"topic": "Renaissance Art",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "What is the boiling point of water in Celsius?",
+		"subject": "Chemistry",
+		"topic": "Physical Chemistry",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Who discovered penicillin?",
+		"subject": "Medicine",
+		"topic": "Medical History",
+		"difficulty": "Hard",
+		"marks": 15
+	},
+	{
+		"question": "Name the first five presidents of the United States",
+		"subject": "History",
+		"topic": "U.S. Presidents",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "What is the speed of light",
+		"subject": "Physics",
+		"topic": "Waves",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Describe Newton's laws of motion",
+		"subject": "Physics",
+		"topic": "Mechanics",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "Solve the quadratic equation",
+		"subject": "Math",
+		"topic": "Algebra",
+		"difficulty": "Hard",
+		"marks": 15
+	},
+	{
+		"question": "What is the capital of France",
+		"subject": "Geography",
+		"topic": "World Capitals",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Who wrote Romeo and Juliet",
+		"subject": "Literature",
+		"topic": "Shakespeare",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "Calculate the area of a circle",
+		"subject": "Math",
+		"topic": "Geometry",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "What is the powerhouse of the cell",
+		"subject": "Biology",
+		"topic": "Cell Biology",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Name the planets in our solar system",
+		"subject": "Astronomy",
+		"topic": "Planets",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "Who is the President of the United States",
+		"subject": "Politics",
+		"topic": "Current Affairs",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "What is the boiling point of water",
+		"subject": "Chemistry",
+		"topic": "Physical Chemistry",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "Who painted the Mona Lisa",
+		"subject": "Art",
+		"topic": "Renaissance Art",
+		"difficulty": "Hard",
+		"marks": 15
+	},
+	{
+		"question": "What is the largest mammal on Earth",
+		"subject": "Biology",
+		"topic": "Marine Biology",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Define the concept of supply and demand",
+		"subject": "Economics",
+		"topic": "Microeconomics",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "Who discovered penicillin",
+		"subject": "Medicine",
+		"topic": "Medical History",
+		"difficulty": "Hard",
+		"marks": 15
+	},
+	{
+		"question": "What is the meaning of life",
+		"subject": "Philosophy",
+		"topic": "Existentialism",
+		"difficulty": "Hard",
+		"marks": 15
+	},
+	{
+		"question": "Name the first five elements of the periodic table",
+		"subject": "Chemistry",
+		"topic": "Elements",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Who won the Nobel Prize in Physics in 2020",
+		"subject": "Physics",
+		"topic": "Nobel Laureates",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "What is the square root of 144",
+		"subject": "Math",
+		"topic": "Arithmetic",
+		"difficulty": "Easy",
+		"marks": 5
+	},
+	{
+		"question": "Who directed the movie Inception",
+		"subject": "Film",
+		"topic": "Directors",
+		"difficulty": "Medium",
+		"marks": 10
+	},
+	{
+		"question": "Define the concept of evolution",
+		"subject": "Biology",
+		"topic": "Evolutionary Biology",
+		"difficulty": "Hard",
+		"marks": 15
+	}
+]
