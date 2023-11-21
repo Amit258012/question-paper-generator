@@ -32,6 +32,7 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 	// Calculate the number of questions for each difficulty
 	const numQuestions = {};
 	validDifficulties.forEach((difficulty) => {
+		// FIXME : Make the format readable
 		numQuestions[difficulty] = Math.floor(
 			(totalMarks * difficultyDistribution[difficulty]) /
 				diffMarks[difficulty]
@@ -50,6 +51,7 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 			);
 		}
 
+		// TODO: get the questions randomly from question strore
 		questionPaper.push(
 			...filteredQuestions.slice(0, numQuestions[difficulty])
 		);

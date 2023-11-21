@@ -7,5 +7,4 @@ class Question {
 		this.marks = marks;
 	}
 }
-
 module.exports = Question;
