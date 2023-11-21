@@ -1,12 +1,13 @@
 const { questionStore } = require("./questionStore");
-const qBank = require("../models/questions.json");
+const questionBank = require("../models/questions.json");
+const { getRandomQuestions } = require("../utils/randomQuestions");
 
-// create difficulty: marks map
+// create {difficulty: marks} map
 const diffMarks = {};
-for (let i = 0; i < qBank.length; i++) {
-	let currQues = qBank[i];
-	if (!diffMarks[currQues.difficulty]) {
-		diffMarks[currQues.difficulty] = currQues.marks;
+for (let i = 0; i < questionBank.length; i++) {
+	let currentQuestion = questionBank[i];
+	if (!diffMarks[currentQuestion.difficulty]) {
+		diffMarks[currentQuestion.difficulty] = currentQuestion.marks;
 	}
 }
 
@@ -20,6 +21,7 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 		0
 	);
 
+	// NOTE : check for 100% diff distribution and every difficulty question must be there
 	if (
 		totalDistribution !== 1 ||
 		!validDifficulties.every(
@@ -32,6 +34,7 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 	// Calculate the number of questions for each difficulty
 	const numQuestions = {};
 	validDifficulties.forEach((difficulty) => {
+		// FIXME : Make the format readable
 		numQuestions[difficulty] = Math.floor(
 			(totalMarks * difficultyDistribution[difficulty]) /
 				diffMarks[difficulty]
@@ -50,8 +53,11 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 			);
 		}
 
+		// randomQuestions(numQuestions[difficulty], filteredQuestions);
+
+		// TODO: get the questions randomly from question strore
 		questionPaper.push(
-			...filteredQuestions.slice(0, numQuestions[difficulty])
+			...getRandomQuestions(numQuestions[difficulty], filteredQuestions)
 		);
 	});
 
