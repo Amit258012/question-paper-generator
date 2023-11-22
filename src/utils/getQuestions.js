@@ -8,7 +8,7 @@ function getQuestions(questionStore) {
 	questionStore.forEach((question, index) => {
 		console.log(
 			`${index + 1}. ${question.question.padEnd(
-				50
+				70
 			)} ( Difficulty: ${question.difficulty.padEnd(
 				maxDifficultyLength
 			)} ) - ( Marks: ${question.marks
