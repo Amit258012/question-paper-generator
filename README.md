@@ -24,13 +24,7 @@ The Question Paper Generator is a Node.js application designed to simplify the p
     cd question-paper-generator
     ```
 
-3. **Install dependencies:**
-
-    ```bash
-    npm install
-    ```
-
-4. **Run Application:**
+3. **Run Application:**
 
     ```bash
     node index.js
