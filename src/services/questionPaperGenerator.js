@@ -21,23 +21,17 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 		0
 	);
 
-	// NOTE : check for 100% diff distribution and every difficulty question must be there
-	if (
-		totalDistribution !== 1 ||
-		!validDifficulties.every(
-			(difficulty) => difficulty in difficultyDistribution
-		)
-	) {
+	// NOTE : Total difficulty distribution must be 100%
+	if (totalDistribution !== 1) {
 		throw new Error("Invalid difficulty distribution");
 	}
 
-	// Calculate the number of questions for each difficulty
-	const numQuestions = {};
+	// Calculate the totalMarks for each difficulty
+	const totalMarksForDifficulty = {};
 	validDifficulties.forEach((difficulty) => {
-		// FIXME : Make the format readable
-		numQuestions[difficulty] = Math.floor(
-			(totalMarks * difficultyDistribution[difficulty]) /
-				diffMarks[difficulty]
+		// FIXME : consider only total marks not number of questions
+		totalMarksForDifficulty[difficulty] = Math.floor(
+			totalMarks * difficultyDistribution[difficulty]
 		);
 	});
 
@@ -47,17 +41,28 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 			(question) => question.difficulty === difficulty
 		);
 
-		if (filteredQuestions.length < numQuestions[difficulty]) {
+		let curDifficultyMarks = filteredQuestions.reduce(
+			(acc, cur) => acc + cur.marks,
+			0
+		);
+		// BUG
+		// console.log(
+		// 	"🫡",
+		// 	curDifficultyMarks,
+		// 	totalMarksForDifficulty[difficulty]
+		// );
+
+		if (curDifficultyMarks < totalMarksForDifficulty[difficulty]) {
 			throw new Error(
 				`Insufficient questions of difficulty ${difficulty}`
 			);
 		}
-
-		// randomQuestions(numQuestions[difficulty], filteredQuestions);
-
-		// TODO: get the questions randomly from question strore
 		questionPaper.push(
-			...getRandomQuestions(numQuestions[difficulty], filteredQuestions)
+			...getRandomQuestions(
+				totalMarksForDifficulty[difficulty],
+				filteredQuestions,
+				difficulty
+			)
 		);
 	});
 
