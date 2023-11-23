@@ -13,7 +13,7 @@ const { getQuestions } = require("./src/utils/getQuestions");
 // getUserInput();
 
 // Display all loaded questions
-getQuestions(questionStore);
+// getQuestions(questionStore);
 
 // Generate a question paper
 const questionPaper = generateQuestionPaper(totalMarks, difficultyRatios);
@@ -21,3 +21,12 @@ const questionPaper = generateQuestionPaper(totalMarks, difficultyRatios);
 // Log the generated question paper
 console.log("\nGenerated Question Paper:");
 getQuestions(questionPaper);
+
+// Total marks of question paper
+const totalMarksOfGeneratedQuestionPaper = questionPaper.reduce(
+	(acc, cur) => acc + cur.marks,
+	0
+);
+console.log(
+	`\nRequired Marks -> ${totalMarks} ,\nGenearted Marks -> ${totalMarksOfGeneratedQuestionPaper}`
+);

@@ -65,7 +65,7 @@
 // 	difficultyRatios,
 // };
 
-const totalMarks = 50;
-const difficultyRatios = { Easy: 0.3, Medium: 0.4, Hard: 0.3 };
+const totalMarks = 30;
+const difficultyRatios = { Easy: 0.1, Medium: 0.4, Hard: 0.5 };
 
 module.exports = { totalMarks, difficultyRatios };

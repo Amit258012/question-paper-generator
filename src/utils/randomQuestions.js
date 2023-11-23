@@ -1,18 +1,20 @@
 const { getRandomIndex } = require("../utils/randomIndex");
+const { possibleQuestionsGenerator } = require("../utils/possibleQuestions");
 
-function getRandomQuestions(numQuestions, questions) {
-	const uniqueQuestions = new Set();
-
-	while (uniqueQuestions.size < numQuestions) {
-		const randomIndex = getRandomIndex(questions.length);
-		const randomQuestion = questions[randomIndex];
-
-		// Add the question to the set (ensures uniqueness)
-		uniqueQuestions.add(randomQuestion);
+function getRandomQuestions(totalMarksForDifficulty, questions, difficulty) {
+	questions.sort((a, b) => a.marks - b.marks);
+	let possibleQuestionSet = possibleQuestionsGenerator(
+		questions,
+		totalMarksForDifficulty
+	);
+	let randomIndex = getRandomIndex(possibleQuestionSet.length);
+	console.log(
+		`Total possible way to genearate questions : ${possibleQuestionSet.length}`
+	);
+	if (possibleQuestionSet.length > 0) {
+		return possibleQuestionSet[randomIndex];
 	}
-
-	// Convert the Set back to an array
-	return Array.from(uniqueQuestions);
+	throw new Error("Insufficient questions to generate the question paper");
 }
 
 module.exports = {
