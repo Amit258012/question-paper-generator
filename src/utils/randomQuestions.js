@@ -11,6 +11,17 @@ function getRandomQuestions(totalMarksForDifficulty, questions, difficulty) {
 	console.log(
 		`Total possible way to genearate questions : ${possibleQuestionSet.length}`
 	);
+	if (possibleQuestionSet.length === 0) {
+		let marks = 0;
+		questions.forEach((question) => {
+			if (marks + question.marks <= totalMarksForDifficulty) {
+				marks += question.marks;
+			}
+		});
+		throw new Error(
+			`${marks} mark ${difficulty.toLowerCase()} question required.`
+		);
+	}
 	if (possibleQuestionSet.length > 0) {
 		return possibleQuestionSet[randomIndex];
 	}
