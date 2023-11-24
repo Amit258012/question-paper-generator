@@ -13,4 +13,26 @@ difficulties.forEach((difficulty) => {
 
 console.log(difficultyRatios);
 
+/*************************
+Uncomment the below 2 line code and comment the above the code: - to generate random questions on every execution with same requirements
+**************************/
+
+// const totalMarks = 100;
+// const difficultyRatios = { Easy: 0.3, Medium: 0.5, Hard: 0.2 };
+
+let areAllIntegers = true;
+
+for (const difficultyLevel of difficulties) {
+	const marks = difficultyRatios[difficultyLevel] * totalMarks;
+	if (!Number.isInteger(marks)) {
+		areAllIntegers = false;
+		break;
+	}
+}
+
+if (!areAllIntegers) {
+	throw new Error(
+		"-------------------------------------------------------------------\n🚫 Marks cannot be divided evenly among the difficulties.\nPlease Provide the proper distribution.\n-------------------------------------------------------------------\n"
+	);
+}
 module.exports = { totalMarks, difficultyRatios };

@@ -23,7 +23,9 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 
 	// NOTE : Total difficulty distribution must be 100%
 	if (totalDistribution !== 1) {
-		throw new Error("Invalid difficulty distribution");
+		throw new Error(
+			"-------------------------------------------------------------------\n🚫 Invalid difficulty distribution.-------------------------------------------------------------------\n"
+		);
 	}
 
 	// Calculate the totalMarks for each difficulty
@@ -54,7 +56,7 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 
 		if (curDifficultyMarks < totalMarksForDifficulty[difficulty]) {
 			throw new Error(
-				`Insufficient questions of difficulty ${difficulty}`
+				`-------------------------------------------------------------------\n🚫Insufficient questions of difficulty ${difficulty}.-------------------------------------------------------------------\n`
 			);
 		}
 		questionPaper.push(

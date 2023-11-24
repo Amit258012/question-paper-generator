@@ -31,7 +31,6 @@ function loadQuestionsFromJsonFile(filePath) {
 	}
 }
 
-// Assuming the JSON file is in the same directory as questionStore.js
 const jsonFilePath = path.join(__dirname, "../models", "questions.json");
 loadQuestionsFromJsonFile(jsonFilePath);
 
