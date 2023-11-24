@@ -4,6 +4,8 @@
 
 The Question Paper Generator is a Node.js application designed to simplify the process of creating question papers for exams or assessments. It allows users to store a collection of questions with various attributes such as subject, topic, difficulty, and marks. The application then leverages this stored data to generate question papers based on specified criteria, providing a quick and efficient way to create balanced and varied assessments.
 
+Coding assignment Link:- https://santoshbaggam.notion.site/Coding-Assignment-f91feb20dce34ab39428ebe8a5131e4e
+
 ## Getting Started
 
 ### Prerequisites
@@ -36,4 +38,4 @@ The Question Paper Generator is a Node.js application designed to simplify the p
     node index.js
     ```
 
--   View the generated question paper in the console.
+-   View the generated question paper in the terminal.
