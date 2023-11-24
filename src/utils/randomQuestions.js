@@ -19,7 +19,7 @@ function getRandomQuestions(totalMarksForDifficulty, questions, difficulty) {
 			}
 		});
 		throw new Error(
-			`-------------------------------------------------------------------\n🚫 ${marks} mark ${difficulty.toLowerCase()} question required.-------------------------------------------------------------------\n`
+			`-------------------------------------------------------------------\n👉 ${marks} mark ${difficulty.toLowerCase()} question required.-------------------------------------------------------------------\n`
 		);
 	}
 	if (possibleQuestionSet.length > 0) {

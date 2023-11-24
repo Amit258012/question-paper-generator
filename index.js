@@ -1,17 +1,17 @@
 const generateQuestionPaper = require("./src/services/questionPaperGenerator");
 // const { questionStore } = require("./src/services/questionStore");
 const { totalMarks, difficultyRatios } = require("./src/userInput");
-const { getQuestions } = require("./src/utils/getQuestions");
+const { printQuestions } = require("./src/utils/printQuestions");
 
 // Display all loaded questions
-// getQuestions(questionStore);
+// printQuestions(questionStore);
 
 // Generate a question paper
 const questionPaper = generateQuestionPaper(totalMarks, difficultyRatios);
 
 // Log the generated question paper
 console.log("\nGenerated Question Paper:");
-getQuestions(questionPaper);
+printQuestions(questionPaper);
 
 // Total marks of question paper
 const totalMarksOfGeneratedQuestionPaper = questionPaper.reduce(

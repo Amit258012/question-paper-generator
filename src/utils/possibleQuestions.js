@@ -1,3 +1,4 @@
+// Finds all possible set of questions, that sum up to totalMarks
 function possibleQuestionsGenerator(questions, totalMarks) {
 	const possibleQuestions = [];
 

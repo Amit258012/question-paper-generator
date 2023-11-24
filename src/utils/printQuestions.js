@@ -1,4 +1,7 @@
-function getQuestions(questionStore) {
+// Print questions to console
+
+function printQuestions(questionStore) {
+	// formatting the output
 	const maxDifficultyLength = Math.max(
 		...questionStore.map((q) => q.difficulty.length)
 	);
@@ -17,4 +20,4 @@ function getQuestions(questionStore) {
 		);
 	});
 }
-module.exports = { getQuestions };
+module.exports = { printQuestions };

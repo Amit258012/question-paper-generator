@@ -24,14 +24,13 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 	// NOTE : Total difficulty distribution must be 100%
 	if (totalDistribution !== 1) {
 		throw new Error(
-			"-------------------------------------------------------------------\n🚫 Invalid difficulty distribution.-------------------------------------------------------------------\n"
+			"-------------------------------------------------------------------\n🚫 Invalid difficulty distribution.\n-------------------------------------------------------------------\n"
 		);
 	}
 
 	// Calculate the totalMarks for each difficulty
 	const totalMarksForDifficulty = {};
 	validDifficulties.forEach((difficulty) => {
-		// FIXME : consider only total marks not number of questions
 		totalMarksForDifficulty[difficulty] = Math.floor(
 			totalMarks * difficultyDistribution[difficulty]
 		);
@@ -47,12 +46,6 @@ function generateQuestionPaper(totalMarks, difficultyDistribution) {
 			(acc, cur) => acc + cur.marks,
 			0
 		);
-		// BUG
-		// console.log(
-		// 	"🫡",
-		// 	curDifficultyMarks,
-		// 	totalMarksForDifficulty[difficulty]
-		// );
 
 		if (curDifficultyMarks < totalMarksForDifficulty[difficulty]) {
 			throw new Error(
