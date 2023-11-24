@@ -19,14 +19,14 @@ function getRandomQuestions(totalMarksForDifficulty, questions, difficulty) {
 			}
 		});
 		throw new Error(
-			`-------------------------------------------------------------------\n👉 ${marks} mark ${difficulty.toLowerCase()} question required.-------------------------------------------------------------------\n`
+			`-------------------------------------------------------------------\n👉 ${marks} mark ${difficulty.toLowerCase()} question required.\nPlease add the question to questions.json file.\n-------------------------------------------------------------------\n`
 		);
 	}
 	if (possibleQuestionSet.length > 0) {
 		return possibleQuestionSet[randomIndex];
 	}
 	throw new Error(
-		"-------------------------------------------------------------------\n🚫 Insufficient questions to generate the question paper.-------------------------------------------------------------------\n"
+		"-------------------------------------------------------------------\n🚫 Insufficient questions to generate the question paper.\n-------------------------------------------------------------------\n"
 	);
 }
 
