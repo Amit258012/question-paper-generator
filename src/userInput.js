@@ -20,6 +20,12 @@ Uncomment the below 2 line code and comment the above the code: - to generate ra
 // const totalMarks = 100;
 // const difficultyRatios = { Easy: 0.3, Medium: 0.5, Hard: 0.2 };
 
+if (totalMarks === 0) {
+	throw new Error(
+		"-------------------------------------------------------------------\n🚫 Total marks cannot be zero (0).\nPlease provide  valid total marks.\n-------------------------------------------------------------------\n"
+	);
+}
+
 let areAllIntegers = true;
 
 for (const difficultyLevel of difficulties) {
@@ -32,7 +38,7 @@ for (const difficultyLevel of difficulties) {
 
 if (!areAllIntegers) {
 	throw new Error(
-		"-------------------------------------------------------------------\n🚫 Marks cannot be divided evenly among the difficulties.\nPlease Provide the proper distribution.\n-------------------------------------------------------------------\n"
+		"-------------------------------------------------------------------\n🚫 Marks cannot be divided evenly among the difficulties.\nPlease provide the proper distribution.\n-------------------------------------------------------------------\n"
 	);
 }
 module.exports = { totalMarks, difficultyRatios };
