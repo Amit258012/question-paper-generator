@@ -1,23 +1,25 @@
-const generateQuestionPaper = require("./src/services/questionPaperGenerator");
+const getQuestionPaper = require("./src/utils/getQuestionPaper");
 // const { questionStore } = require("./src/services/questionStore");
-const { totalMarks, difficultyRatios } = require("./src/userInput");
-const { printQuestions } = require("./src/utils/printQuestions");
+
+const ps = require("prompt-sync");
+const prompt = ps({ sigint: true });
 
 // Display all loaded questions
 // printQuestions(questionStore);
 
-// Generate a question paper
-const questionPaper = generateQuestionPaper(totalMarks, difficultyRatios);
+let generateAgain = true;
 
-// Log the generated question paper
-console.log("\nGenerated Question Paper:");
-printQuestions(questionPaper);
+while (generateAgain) {
+	getQuestionPaper();
+	let input = prompt(
+		"Do you want different questions set for same input? (y/n) : "
+	).toLowerCase();
 
-// Total marks of question paper
-const totalMarksOfGeneratedQuestionPaper = questionPaper.reduce(
-	(acc, cur) => acc + cur.marks,
-	0
-);
-console.log(
-	`\nRequired question paper of Marks -> ${totalMarks} ,\nGenearted question paper of Marks -> ${totalMarksOfGeneratedQuestionPaper}`
-);
+	if (input === "y") {
+		getQuestionPaper();
+	} else {
+		generateAgain = false;
+	}
+}
+
+console.log("Have a nice day😁");
