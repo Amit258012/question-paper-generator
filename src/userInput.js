@@ -7,7 +7,7 @@ const totalMarks = parseInt(prompt("Enter total Marks : "));
 
 console.log("Enter the below data in percentage, ex :- 30%");
 difficulties.forEach((difficulty) => {
-	percent = parseFloat(prompt(`Enter ${difficulty} % :  `)) / 100;
+	percent = parseFloat(prompt(`Enter ${difficulty} % :  `));
 	difficultyRatios[difficulty] = percent;
 });
 
