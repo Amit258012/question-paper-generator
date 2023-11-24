@@ -38,4 +38,4 @@ Coding assignment Link:- https://santoshbaggam.notion.site/Coding-Assignment-f91
     node index.js
     ```
 
--   View the generated question paper in the console.
+-   View the generated question paper in the terminal.
